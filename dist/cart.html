@@ -4,16 +4,17 @@
    <title>Путевки онлайн</title>
    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css" />
    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+   <script src="./src/st.js"></script>
+   <script src="./src/cart.js"></script>
  </head>
  <body>
   <header class="site-header">
    <div class="main_menu">
     <nav class="navbar navbar-expand-lg navbar-light">
      <div class="container">
-      <a class="navbar-brand site-header-logo" href="/">Путевки онлайн</a>
-
+      <a class="navbar-brand site-header-logo" href="./index.html">Путевки онлайн</a>
       <button type="button" class="btn btn-primary">
-       Корзина <span class="badge badge-light">4</span>
+       Корзина <span class="badge badge-light" id="badgeCount"></span>
       </button>
      </div>
     </nav>
@@ -33,34 +34,10 @@
      <th scope="col"></th>
     </tr>
     </thead>
-    <tbody>
-    <tr>
-     <th scope="row">1</th>
-     <td>Париж</td>
-     <td>400 000 руб</td>
-     <td><input type="number" class="form-control cart-number" value="1" min="1"></td>
-     <td>400 000 руб</td>
-     <td><button type="button" class="btn btn-danger">Удалить</button></td>
-    </tr>
-    <tr>
-     <th scope="row">2</th>
-     <td>Москва</td>
-     <td>150 000 руб</td>
-     <td><input type="number" class="form-control cart-number" value="2" min="1"></td>
-     <td>300 000 руб</td>
-     <td><button type="button" class="btn btn-danger">Удалить</button></td>
-    </tr>
-    <tr>
-     <th scope="row" colspan="3">&nbsp;</th>
-     <td><b>Итого:</b></td>
-     <td>700 000 руб</td>
-     <td>&nbsp;</td>
-    </tr>
-    </tbody>
+    <tbody id="tbody"></tbody>
    </table>
   </div>
  </section>
-
  <footer>
   <div class="footer-bottom">
    <div class="container">
@@ -71,7 +48,5 @@
    </div>
   </div>
  </footer>
-
- <script src="main.js"></script>
  </body>
 </html>

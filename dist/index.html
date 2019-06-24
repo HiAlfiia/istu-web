@@ -4,16 +4,18 @@
    <title>Путевки онлайн</title>
    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css" />
    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+   <script src="./src/st.js"></script>
+   <script src="./src/index.js"></script>
  </head>
  <body>
   <header class="site-header">
    <div class="main_menu">
     <nav class="navbar navbar-expand-lg navbar-light">
      <div class="container">
-      <a class="navbar-brand site-header-logo" href="/">Путевки онлайн</a>
+      <a class="navbar-brand site-header-logo" href="./index.html">Путевки онлайн</a>
 
       <a class="btn btn-primary" href="./cart.html">
-       Корзина <span class="badge badge-light">4</span>
+       Корзина <span class="badge badge-light" id="badgeCount"></span>
       </a>
      </div>
     </nav>
@@ -22,12 +24,13 @@
 
  <section class="site-main mb-5">
   <div class="container">
+    <form>
    <div class="row">
     <div class="col-xl-3 col-lg-4 col-md-5">
      <div class="filter-sidebar">
       <div class="filter-sidebar-header">Страны:</div>
       <div class="filter-sidebar-content">
-       <div class="form-check">
+       <div class="form-check" id="countryCheck">
         <input class="form-check-input" type="radio" name="country" id="country-0" value="0" checked>
         <label class="form-check-label" for="country-0">
          Все (21)
@@ -58,27 +61,16 @@
      <div class="filter-bar">
       <div>
        <div class="input-group">
-        <input type="text" class="form-control" placeholder="Название города">
+        <input type="text" class="form-control" name="city" placeholder="Название города">
         <div class="input-group-append">
-         <button class="btn btn-outline-secondary" type="button" id="button-addon2">Искать</button>
+         <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="updateOffers(this.form)">Искать</button>
         </div>
        </div>
       </div>
      </div>
-
      <section class="lattest-product-area pb-40 category-list">
-      <div class="row">
-        <div class="card text-center card-product">
-         <div class="card-product__img">
-          <img class="card-img" src="https://placeimg.com/255/255/nature" alt="">
-         </div>
-         <div class="card-body">
-          <p>Россия</p>
-          <h4 class="card-product__title">Сочи</h4>
-          <p class="card-product__price">200 000 руб</p>
-          <p><button type="button" class="btn btn-primary">Заказать</button></p>
-         </div>
-        </div>
+      <div class="row" id="ctrs">
+
          <div class="card text-center card-product">
           <div class="card-product__img">
            <img class="card-img" src="https://placeimg.com/255/255/nature?2" alt="">
@@ -90,33 +82,13 @@
            <p><button type="button" class="btn btn-danger">Отмена</button></p>
           </div>
          </div>
-         <div class="card text-center card-product">
-          <div class="card-product__img">
-           <img class="card-img" src="https://placeimg.com/255/255/nature?3" alt="">
-          </div>
-          <div class="card-body">
-           <p>Тайланд</p>
-           <h4 class="card-product__title">Бангкок</h4>
-           <p class="card-product__price">50 000 руб</p>
-           <p><button type="button" class="btn btn-primary">Заказать</button></p>
-          </div>
-         </div>
-        <div class="card text-center card-product">
-         <div class="card-product__img">
-          <img class="card-img" src="https://placeimg.com/255/255/nature?4" alt="">
-         </div>
-         <div class="card-body">
-          <p>Тайланд</p>
-          <h4 class="card-product__title">Пхукет</h4>
-          <p class="card-product__price">60 000 руб</p>
-          <p><button type="button" class="btn btn-primary">Заказать</button></p>
-         </div>
-        </div>
+
        </div>
      </section>
 
     </div>
    </div>
+ </form>
   </div>
  </section>
 
@@ -130,7 +102,5 @@
    </div>
   </div>
  </footer>
-
- <script src="main.js"></script>
  </body>
 </html>
