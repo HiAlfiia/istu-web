@@ -2,10 +2,17 @@ window.onload = function() {
   update();
 };
 
+class ProdInBadge{
+  constructor(price, count){
+    this.price=price;
+    this.count=count;
+  }
+}
+
 var update = function(){
   updateBadge();
   var cou =0;
-  var fullSum = 0;
+  var prodsInBadge = [];
   var table = document.getElementById("tbody");
   table.innerHTML="";
   for (var i = 0; i < localStorage.length; i++){
@@ -38,7 +45,7 @@ var update = function(){
     product.appendChild(count);
     var sum = document.createElement('td');
     sum.innerHTML=Number(localStorage[ind])*allProducts[ind].price + ' руб';
-    fullSum+=Number(localStorage[ind])*allProducts[ind].price;
+    prodsInBadge.push(new ProdInBadge(allProducts[ind].price, Number(localStorage[ind])));
     product.appendChild(sum);
     var del = document.createElement('td');
     var delB = document.createElement('button');
@@ -63,9 +70,21 @@ var update = function(){
   var fSumText = document.createElement('td');
   fSumText.innerHTML="Итого: ".bold();
   var fSum = document.createElement('td');
-  fSum.innerHTML=fullSum+' руб';
+  fSum.innerHTML=getSum(prodsInBadge)+' руб';
   res.appendChild(empty);
   res.appendChild(fSumText);
   res.appendChild(fSum);
   table.appendChild(res);
+}
+
+var getSum = function(prodsInBadge){
+  if(prodsInBadge == null){
+    return 0;
+  }
+
+  var result = 0;
+  for (var i = 0; i < prodsInBadge.length; i++) {
+    result+=prodsInBadge[i].price*prodsInBadge[i].count;
+  }
+  return result;
 }
