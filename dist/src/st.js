@@ -25,3 +25,28 @@ var updateBadge = function(){
   var bc = document.getElementById("badgeCount");
   bc.innerHTML = count;
 }
+
+
+class ProdInBadge{
+  constructor(price, count){
+    this.price=price;
+    this.count=count;
+  }
+}
+
+var getSum = function(prodsInBadge){
+  if(prodsInBadge == null){
+    return 0;
+  }
+
+  var result = 0;
+  for (var i = 0; i < prodsInBadge.length; i++) {
+    result+=prodsInBadge[i].price*prodsInBadge[i].count;
+  }
+  return result;
+}
+
+module.exports = {
+  getSum,
+  ProdInBadge
+};

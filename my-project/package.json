@@ -8,13 +8,15 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "test": "mocha C:\\Users\\a.khairullina\\Desktop\\we\\istu-web\\test\\t.test.js"
   },
   "dependencies": {
     "nuxt": "^2.0.0"
   },
   "devDependencies": {
     "chai": "^4.2.0",
+    "mocha": "^6.1.4",
     "nodemon": "^1.18.9"
   }
 }

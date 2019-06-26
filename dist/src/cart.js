@@ -1,13 +1,6 @@
-window.onload = function() {
+﻿window.onload = function() {
   update();
 };
-
-class ProdInBadge{
-  constructor(price, count){
-    this.price=price;
-    this.count=count;
-  }
-}
 
 var update = function(){
   updateBadge();
@@ -75,16 +68,4 @@ var update = function(){
   res.appendChild(fSumText);
   res.appendChild(fSum);
   table.appendChild(res);
-}
-
-var getSum = function(prodsInBadge){
-  if(prodsInBadge == null){
-    return 0;
-  }
-
-  var result = 0;
-  for (var i = 0; i < prodsInBadge.length; i++) {
-    result+=prodsInBadge[i].price*prodsInBadge[i].count;
-  }
-  return result;
 }
