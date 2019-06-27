@@ -48,7 +48,6 @@
      <section class="lattest-product-area pb-40 category-list" id="ctrs">
       <div class="row">
          <div class="card text-center card-product"  v-for="prod in products">
-		 {{products}}
           <div class="card-product__img">
            <img class="card-img" :src="prod.img" alt="">
           </div>
@@ -69,8 +68,6 @@
 </template>
 
 <script src="../src/st.js"></script>
-<script src="https://unpkg.com/vue"></script>
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script>
 	var obj = JSON.parse('{"obj":[ { "name": "Москва", "price": 150000, "country": "Россия", "img": "https://placeimg.com/255/255/nature?0" }, '+
 	'{ "name": "Сочи", "price": 200000, "country": "Россия", "img": "https://placeimg.com/255/255/nature?1" },'+ 
@@ -80,13 +77,6 @@
 	
   module.exports = {
   data() {
-	return axios.get('/js.json')
-        .then((res) => {
-          return {
-            products: res.obj
-          }
-        })
-  
     return {products : obj.obj};
   }
 }
