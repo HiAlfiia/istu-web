@@ -1,6 +1,13 @@
-﻿window.onload = function() {
+window.onload = function() {
   update();
 };
+
+class ProdInBadge{
+  constructor(price, count){
+    this.price=price;
+    this.count=count;
+  }
+}
 
 var update = function(){
   updateBadge();
