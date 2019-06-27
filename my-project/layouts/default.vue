@@ -1,55 +1,47 @@
 <template>
-  <div>
-    <nuxt />
+<body>
+  <header class="site-header">
+     <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css" />
+   <link rel="stylesheet" type="text/css" href="./css/main.css" />
+   <div class="main_menu">
+    <nav class="navbar navbar-expand-lg navbar-light">
+     <div class="container">
+      <nuxt-link to="/" class="navbar-brand site-header-logo">Путевки онлайн</nuxt-link>
+      <nuxt-link to="/cart" class="btn btn-primary">
+       Корзина <span class="badge badge-light" id="badgeCount"></span>
+      </nuxt-link>
+     </div>
+    </nav>
+   </div>
+  </header>
+  
+  <nuxt/>
+  
+  <footer>
+  <div class="footer-bottom">
+   <div class="container">
+    <div class="row d-flex">
+     <p class="col-lg-12 footer-text text-center">
+      Copyright ©2019
+	  </p>
+    </div>
+   </div>
   </div>
+ </footer>
+ </body>
 </template>
 
-<style>
-html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
+<style src="./main.css"></style>
+<style src="./bootstrap.min.css"></style>
 
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  margin: 0;
-}
-
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
-}
-
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
-
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
-}
-</style>
+<script>
+import AppNavigation from './../components/AppNavigation.vue';
+import AppFooter from './../components/AppFooter.vue';
+export default {
+  components: {
+    AppNavigation,
+    AppFooter
+  }
+};
+</script>
+<script src="../src/st.js"></script>

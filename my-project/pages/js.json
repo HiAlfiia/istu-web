@@ -1,0 +1,5 @@
+{"obj":[ { "name": "Москва", "price": 150000, "country": "Россия", "img": "https://placeimg.com/255/255/nature?0" },
+	'{ "name": "Сочи", "price": 200000, "country": "Россия", "img": "https://placeimg.com/255/255/nature?1" },
+	'{ "name": "Париж", "price": 400000, "country": "Франция", "img": "https://placeimg.com/255/255/nature?2" },
+	'{ "name": "Бангкок", "price": 50000, "country": "Таиланд", "img": "https://placeimg.com/255/255/nature?3" }
+	'{ "name": "Пухкет", "price": 60000, "country": "Таиланд", "img": "https://placeimg.com/255/255/nature?4" } ]}
