@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "nuxt": "^2.0.0",
+    "sqlite": "^3.0.3",
     "vue-class-component": "^7.1.0"
   },
   "devDependencies": {
