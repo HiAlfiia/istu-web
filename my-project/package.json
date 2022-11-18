@@ -12,7 +12,7 @@
     "test": "mocha C:\\Users\\a.khairullina\\Desktop\\we\\istu-web\\test\\t.test.js"
   },
   "dependencies": {
-    "nuxt": "^2.0.0",
+    "nuxt": "^2.15.8",
     "sqlite": "^3.0.3",
     "vue-class-component": "^7.1.0"
   },
